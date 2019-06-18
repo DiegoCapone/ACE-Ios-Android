@@ -1,12 +1,19 @@
 import React from 'react';
-import { StyleSheet, Platform, Image, Text, View, ScrollView } from 'react-native';
-
+import { StyleSheet, Platform, Image, Text, View, ScrollView, Button } from 'react-native';
 import firebase from 'react-native-firebase';
+
 
 export default class App extends React.Component {
   constructor() {
     super();
     this.state = {};
+  }
+
+  teste = () => {
+    firebase.firestore().collection('Clientes').doc('22799486000102')
+              .get().then((doc) => { 
+                  console.log(doc.data())
+              })
   }
 
   async componentDidMount() {
@@ -56,6 +63,12 @@ export default class App extends React.Component {
             {firebase.notifications.nativeModuleExists && <Text style={styles.module}>notifications()</Text>}
             {firebase.perf.nativeModuleExists && <Text style={styles.module}>perf()</Text>}
             {firebase.storage.nativeModuleExists && <Text style={styles.module}>storage()</Text>}
+            <Button
+              onPress={this.teste}
+              title="Learn More"
+              color="#841584"
+              accessibilityLabel="Learn more about this purple button"
+            />
           </View>
         </View>
       </ScrollView>

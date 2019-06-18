@@ -1,4 +1,4 @@
-package com.invertase.rnfirebasestarter;
+package com.grupomir.wwwgrupomiraceappcombr;
 
 import android.support.multidex.MultiDexApplication;
 

@@ -1,0 +1,83 @@
+{
+  "project_info": {
+    "project_number": "164394762519",
+    "firebase_url": "https://appace-cdf74.firebaseio.com",
+    "project_id": "appace-cdf74",
+    "storage_bucket": "appace-cdf74.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:164394762519:android:ad111f8b5855d50e",
+        "android_client_info": {
+          "package_name": "com.grupomir.wwwgrupomiraceappcombr"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "164394762519-mvlau9j774d1nl7fjh5jru567htue94q.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAZ2-b4sNLbTULgfZ6Mt0nStJsexDL8HHo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "164394762519-mvlau9j774d1nl7fjh5jru567htue94q.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "164394762519-la1enlu4raiud2qqocsoiuc4q8epivf6.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.grupomir.wwwgrupomiracecombr"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:164394762519:android:c60e0fad230f4996",
+        "android_client_info": {
+          "package_name": "com.wwwgrupomiracev2combr"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "164394762519-mvlau9j774d1nl7fjh5jru567htue94q.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAZ2-b4sNLbTULgfZ6Mt0nStJsexDL8HHo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "164394762519-mvlau9j774d1nl7fjh5jru567htue94q.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "164394762519-la1enlu4raiud2qqocsoiuc4q8epivf6.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.grupomir.wwwgrupomiracecombr"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
