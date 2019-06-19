@@ -21,7 +21,7 @@ export default class ComponentHome extends Component {
     }
 
     Logout = () => {
-        // this.props.navigation.navigate('ValidaToken') 
+        this.props.navigation.navigate('Auth')
     }
 
     Novo = async () => {
@@ -97,7 +97,8 @@ export default class ComponentHome extends Component {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        justifyContent: 'space-around'
+        justifyContent: 'space-around',
+        
     },
     containerHeader: {
         paddingHorizontal: 10,
@@ -107,6 +108,7 @@ const styles = StyleSheet.create({
         // marginBottom: 30,
         flexDirection: 'row',
         flexWrap: 'wrap',
+        justifyContent: 'space-around',
     },
     containerBar: {
 
@@ -122,7 +124,4 @@ const styles = StyleSheet.create({
         color: Styles.cor.branco,
         fontWeight: 'bold',
     },
-    containerData: {
-        marginLeft: 10
-    }
 });

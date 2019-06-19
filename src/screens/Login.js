@@ -19,26 +19,26 @@ export default class Login extends Component {
     }
 
  GeraToken = async () => {
+    this.props.navigation.navigate('Home')
+    // navigator.geolocation.getCurrentPosition((position) => { })
 
-        // navigator.geolocation.getCurrentPosition((position) => { })
+    // if (!this.state.placa) {
+    //     return Alert.alert('Informe a placa')
+    // }
 
-        // if (!this.state.placa) {
-        //     return Alert.alert('Informe a placa')
-        // }
+    // if (!this.state.cpf) {
+    //     return Alert.alert('Informe a o cpf')
+    // }
 
-        // if (!this.state.cpf) {
-        //     return Alert.alert('Informe a o cpf')
-        // }
-
-        // const data = await GeraToken()
-        // if (data) {
-        //     this.props.onPlacaCpf({ ...this.state })
-        //     this.props.navigation.navigate('Home')
-        //     console.log(true)
-        // } else {
-        //     console.log(false)
-        // }
-    }
+    // const data = await GeraToken()
+    // if (data) {
+    //     this.props.onPlacaCpf({ ...this.state })
+    //     this.props.navigation.navigate('Home')
+    //     console.log(true)
+    // } else {
+    //     console.log(false)
+    // }
+}
 
 
     render() {
@@ -53,14 +53,22 @@ export default class Login extends Component {
                         <Input
                             icon='truck'
                             placeholder='Placa'
+                            type={'custom'}
+                            options={{
+                            mask: 'AAA-9999'
+                            }}
                             value={this.state.placa}
+                            autoCapitalize="characters"
                             editable={true} style={{ marginBottom: 5 }}
-                            onChangeText={placa => this.setState({ placa })} />
+                            onChangeText={placa => {
+                                this.setState({ placa: placa.toUpperCase() })
+                            }} />
 
                         <Input
                             icon='address-card'
+                            type={'cpf'}
                             placeholder='CPF'
-                            value={this.state.cnpj}
+                            value={this.state.cpf}
                             editable={true}
                             onChangeText={cpf => this.setState({ cpf })} />
                         <BtnAdd nome='Login' action={this.GeraToken} />
