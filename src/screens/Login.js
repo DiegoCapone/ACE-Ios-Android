@@ -4,12 +4,12 @@ import BtnAdd from '../components/BtnAdd'
 import Input from '../components/Input'
 import Styles from '../styles/StylesPattern'
 // import axios from 'axios'
-// import { connect } from 'react-redux'
-// import { onPlacaCpf } from '../store/actions/placaCpf'
+import { connect } from 'react-redux'
+import { onPlacaCpf } from '../store/actions/placaCpf'
 // import GeraToken from '../GeraToken'
 import Background from '../components/Background'
 
-export default class Login extends Component {
+class Login extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -20,6 +20,7 @@ export default class Login extends Component {
 
  GeraToken = async () => {
     this.props.navigation.navigate('Home')
+    this.props.onPlacaCpf({ ...this.state })
     // navigator.geolocation.getCurrentPosition((position) => { })
 
     // if (!this.state.placa) {
@@ -105,3 +106,11 @@ const styles = StyleSheet.create({
 
     }
 });
+
+const mapDispatchToProps = dispatch => {
+    return {
+        onPlacaCpf: placaCpf => dispatch(onPlacaCpf(placaCpf))
+    }
+}
+
+export default connect(null, mapDispatchToProps)(Login)
